@@ -16,9 +16,6 @@ public class CalcPayment {
 		
 	
 		WebDriver driver = openBrowser.openURL("https://www.mortgagecalculator.org/");
-	
-		// CalcPage calc = new CalcPage(driver);
-		
 		CalcPage_New calc = PageFactory.initElements(driver, CalcPage_New.class);
 		calc.CalculatePayment("600000", "100000", "0", "3.75");
 		String finalPMI= calc.capturePMI();
