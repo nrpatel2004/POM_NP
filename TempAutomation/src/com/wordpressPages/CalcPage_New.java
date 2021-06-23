@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 
 /**
  * @author nsqaure
- *
+ * This is just a test
  */
 public class CalcPage_New {
 
