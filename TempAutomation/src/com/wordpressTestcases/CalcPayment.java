@@ -11,18 +11,17 @@ import com.wordpressUtility.openBrowser;
 
 public class CalcPayment {
 
-	@Test
-	public void captureMonthlyPayment() {
-		
+	public static void main(String[] args)  {
+		captureMonthlyPayment();
+		}
+@Test
 	
+	public static void captureMonthlyPayment() {
 		WebDriver driver = openBrowser.openURL("https://www.mortgagecalculator.org/");
 		CalcPage_New calc = PageFactory.initElements(driver, CalcPage_New.class);
 		calc.CalculatePayment("600000", "100000", "0", "3.75");
 		String finalPMI= calc.capturePMI();
 		System.out.println(finalPMI);
-		
-		
-	}
-	
+}	
 	
 }
